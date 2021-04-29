@@ -1,0 +1,42 @@
+$l-bg-color: #f1f1f1
+
+.radio
+
+  input[type="radio"]
+    position: absolute
+    opacity: 0
+
+    + .radio-label
+      &:before
+        content: ''
+        background: $l-bg-color
+        border-radius: 100%
+        border: 1px solid darken($l-bg-color, 15%)
+        display: inline-block
+        width: 24px
+        height: 24px
+        position: relative
+        top: 2px
+        margin-right: 16px
+        vertical-align: top
+        cursor: pointer
+        text-align: center
+        transition: all 250ms ease
+        outline: none
+
+    &:checked
+      + .radio-label
+        &:before
+          background-color: $primary-color
+          box-shadow: inset 0 0 0 4px $l-bg-color
+
+    &:disabled
+      + .radio-label
+        &:before
+          box-shadow: inset 0 0 0 4px $l-bg-color
+          background-color: darken($l-bg-color, 20%)
+
+    + .radio-label
+      &:empty
+        &:before
+          margin-right: 0

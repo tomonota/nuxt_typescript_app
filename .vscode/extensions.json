@@ -1,0 +1,9 @@
+{
+  // vocodeにインストールする推奨プラグイン
+  // インストールは手動で行う
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint"
+  ]
+}

@@ -1,0 +1,46 @@
+$l-bg-color: #f1f1f1
+$l-border-color: #e5e5e5
+
+.checkbox
+  display: inline-block
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+  input[type="checkbox"]
+    position: absolute
+    opacity: 0
+
+    + .checked-label
+      &:before
+        content: ''
+        display: inline-block
+        position: relative
+        height: 24px
+        width: 24px
+        background-color: $l-bg-color
+        border: 1px solid darken($l-bg-color, 15%)
+        border-radius: 2px
+        top: 5px
+        margin-right: 16px
+        cursor: pointer
+
+    &:checked
+      + .checked-label
+        position: relative
+        &:before
+          background-color: $primary-color
+          border: 2px solid $primary-color
+        &:after
+          content: ''
+          position: absolute
+          left: 8px
+          top: -2px
+          width: 8px
+          height: 13px
+          border: solid white
+          border-width: 0 2px 2px 0
+          -webkit-transform: rotate(45deg)
+          -ms-transform: rotate(45deg)
+          transform: rotate(45deg)

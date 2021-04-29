@@ -1,0 +1,36 @@
+$l-bg-color: #f1f1f1
+
+.selectbox
+  display: inline-block
+  background: $l-bg-color
+  height: 40px
+  width: 320px
+  border: 1px solid darken($l-bg-color, 10%)
+  border-radius: 6px
+  position: relative
+  z-index: 1
+  &:hover
+    background-color: darken($l-bg-color, 5%)
+
+.selectbox
+  &:after
+    font-family: 'Material Icons'
+    content: 'arrow_drop_down'
+    position: absolute
+    top: -5px
+    right: 10px
+    font-size: 1.8rem
+    z-index: -1
+    color: darken($l-bg-color, 30%)
+
+select
+  appearance: none
+  -moz-appearance: none
+  -webkit-appearance: none
+  background: none
+  border: none
+  width: 100%
+  height: 100%
+  padding: 0 32px 0 16px
+  outline: none
+  cursor: pointer
